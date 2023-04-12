@@ -1,0 +1,6 @@
+framework module Pods_Modern_Stagecoach {
+  umbrella header "Pods-Modern Stagecoach-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9295CC1D29E63F51004922AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC1C29E63F51004922AC /* AppDelegate.swift */; };
+		9295CC1F29E63F51004922AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC1E29E63F51004922AC /* SceneDelegate.swift */; };
+		9295CC2629E63F52004922AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9295CC2529E63F52004922AC /* Assets.xcassets */; };
+		9295CC2929E63F52004922AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9295CC2729E63F52004922AC /* LaunchScreen.storyboard */; };
+		9295CC3529E6452A004922AC /* ALSeatConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC3429E6452A004922AC /* ALSeatConfig.swift */; };
+		9295CC3729E64593004922AC /* ALSeatDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC3629E64593004922AC /* ALSeatDataManager.swift */; };
+		9295CC3929E645D4004922AC /* ALSeatCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC3829E645D4004922AC /* ALSeatCreator.swift */; };
+		9295CC3D29E64707004922AC /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC3C29E64707004922AC /* Notification+Extension.swift */; };
+		9295CC3F29E64726004922AC /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC3E29E64726004922AC /* Date+Extension.swift */; };
+		9295CC4129E64746004922AC /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC4029E64746004922AC /* UITextField+Extension.swift */; };
+		9295CC4329E64802004922AC /* DestinationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC4229E64802004922AC /* DestinationModel.swift */; };
+		9295CC4529E6482E004922AC /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC4429E6482E004922AC /* TravelModel.swift */; };
+		9295CC4729E64847004922AC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC4629E64847004922AC /* UserModel.swift */; };
+		9295CC4929E64885004922AC /* OnboardingPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC4829E64885004922AC /* OnboardingPageModel.swift */; };
+		9295CC4B29E6489F004922AC /* TicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC4A29E6489F004922AC /* TicketModel.swift */; };
+		9295CC4D29E648F9004922AC /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC4C29E648F9004922AC /* CityModel.swift */; };
+		9295CC4F29E64953004922AC /* TravellerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC4E29E64953004922AC /* TravellerModel.swift */; };
+		9295CC5129E649D0004922AC /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC5029E649D0004922AC /* OnboardingCollectionViewCell.swift */; };
+		9295CC5E29E64CE9004922AC /* Ticket.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9295CC5D29E64CE9004922AC /* Ticket.xib */; };
+		9295CC6029E64E02004922AC /* User.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9295CC5F29E64E02004922AC /* User.xib */; };
+		9295CC6229E64E9E004922AC /* BoughtTicket.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9295CC6129E64E9E004922AC /* BoughtTicket.xib */; };
+		9295CC6829E652A9004922AC /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC6729E652A9004922AC /* Ticket.swift */; };
+		9295CC6A29E652DE004922AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC6929E652DE004922AC /* User.swift */; };
+		9295CC6C29E65312004922AC /* BoughtTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC6B29E65312004922AC /* BoughtTicket.swift */; };
+		9295CC7129E65366004922AC /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC7029E65366004922AC /* Passenger.swift */; };
+		9295CC7329E65378004922AC /* TravelDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC7229E65378004922AC /* TravelDate.swift */; };
+		9295CC7529E65388004922AC /* TravelHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC7429E65388004922AC /* TravelHour.swift */; };
+		9295CC7A29E65776004922AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9295CC7929E65776004922AC /* Main.storyboard */; };
+		9295CC7C29E66157004922AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC7B29E66157004922AC /* ViewController.swift */; };
+		9295CC7E29E662E2004922AC /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC7D29E662E2004922AC /* HomeScreenViewController.swift */; };
+		9295CC8029E66448004922AC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC7F29E66448004922AC /* AlertViewController.swift */; };
+		9295CC8229E6647C004922AC /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC8129E6647C004922AC /* TicketsViewController.swift */; };
+		9295CC8429E66510004922AC /* TravelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC8329E66510004922AC /* TravelListViewController.swift */; };
+		9295CC8629E665AC004922AC /* BusScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC8529E665AC004922AC /* BusScreenViewController.swift */; };
+		9295CC8829E66A44004922AC /* PassengerTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295CC8729E66A44004922AC /* PassengerTicket.swift */; };
+		DFC3351E20C0B8508DFD2F7E /* Pods_Modern_Stagecoach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FCEB48A77B8F03EF8C142E9 /* Pods_Modern_Stagecoach.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2461E901E47D6CCE68EFE6D2 /* Pods-Modern Stagecoach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modern Stagecoach.release.xcconfig"; path = "Target Support Files/Pods-Modern Stagecoach/Pods-Modern Stagecoach.release.xcconfig"; sourceTree = "<group>"; };
+		3FCEB48A77B8F03EF8C142E9 /* Pods_Modern_Stagecoach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modern_Stagecoach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9295CC1929E63F51004922AC /* Modern Stagecoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Modern Stagecoach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9295CC1C29E63F51004922AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9295CC1E29E63F51004922AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9295CC2529E63F52004922AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9295CC2829E63F52004922AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9295CC2A29E63F52004922AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9295CC3429E6452A004922AC /* ALSeatConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALSeatConfig.swift; sourceTree = "<group>"; };
+		9295CC3629E64593004922AC /* ALSeatDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALSeatDataManager.swift; sourceTree = "<group>"; };
+		9295CC3829E645D4004922AC /* ALSeatCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALSeatCreator.swift; sourceTree = "<group>"; };
+		9295CC3C29E64707004922AC /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		9295CC3E29E64726004922AC /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		9295CC4029E64746004922AC /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		9295CC4229E64802004922AC /* DestinationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationModel.swift; sourceTree = "<group>"; };
+		9295CC4429E6482E004922AC /* TravelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
+		9295CC4629E64847004922AC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9295CC4829E64885004922AC /* OnboardingPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageModel.swift; sourceTree = "<group>"; };
+		9295CC4A29E6489F004922AC /* TicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketModel.swift; sourceTree = "<group>"; };
+		9295CC4C29E648F9004922AC /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		9295CC4E29E64953004922AC /* TravellerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravellerModel.swift; sourceTree = "<group>"; };
+		9295CC5029E649D0004922AC /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		9295CC5D29E64CE9004922AC /* Ticket.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Ticket.xib; sourceTree = "<group>"; };
+		9295CC5F29E64E02004922AC /* User.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = User.xib; sourceTree = "<group>"; };
+		9295CC6129E64E9E004922AC /* BoughtTicket.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoughtTicket.xib; sourceTree = "<group>"; };
+		9295CC6729E652A9004922AC /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		9295CC6929E652DE004922AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9295CC6B29E65312004922AC /* BoughtTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoughtTicket.swift; sourceTree = "<group>"; };
+		9295CC7029E65366004922AC /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		9295CC7229E65378004922AC /* TravelDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelDate.swift; sourceTree = "<group>"; };
+		9295CC7429E65388004922AC /* TravelHour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelHour.swift; sourceTree = "<group>"; };
+		9295CC7929E65776004922AC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9295CC7B29E66157004922AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9295CC7D29E662E2004922AC /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		9295CC7F29E66448004922AC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		9295CC8129E6647C004922AC /* TicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
+		9295CC8329E66510004922AC /* TravelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelListViewController.swift; sourceTree = "<group>"; };
+		9295CC8529E665AC004922AC /* BusScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusScreenViewController.swift; sourceTree = "<group>"; };
+		9295CC8729E66A44004922AC /* PassengerTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerTicket.swift; sourceTree = "<group>"; };
+		BC78A83A298ABCC99776CFD1 /* Pods-Modern Stagecoach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modern Stagecoach.debug.xcconfig"; path = "Target Support Files/Pods-Modern Stagecoach/Pods-Modern Stagecoach.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9295CC1629E63F51004922AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFC3351E20C0B8508DFD2F7E /* Pods_Modern_Stagecoach.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5277F5849B9D7E6269765F76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FCEB48A77B8F03EF8C142E9 /* Pods_Modern_Stagecoach.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9295CC1029E63F51004922AC = {
+			isa = PBXGroup;
+			children = (
+				9295CC1B29E63F51004922AC /* Modern Stagecoach */,
+				9295CC1A29E63F51004922AC /* Products */,
+				E4F39712472C00B13AEA0388 /* Pods */,
+				5277F5849B9D7E6269765F76 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9295CC1A29E63F51004922AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC1929E63F51004922AC /* Modern Stagecoach.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9295CC1B29E63F51004922AC /* Modern Stagecoach */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC7629E6554D004922AC /* ViewControllers */,
+				9295CC6D29E6533F004922AC /* Classes */,
+				9295CC5529E64B59004922AC /* Storyboards */,
+				9295CC5229E64ABE004922AC /* ViewCells */,
+				9295CC3329E64502004922AC /* ALConfig */,
+				9295CC3229E64220004922AC /* Extensions */,
+				9295CC3029E641EF004922AC /* Models */,
+				9295CC1C29E63F51004922AC /* AppDelegate.swift */,
+				9295CC1E29E63F51004922AC /* SceneDelegate.swift */,
+				9295CC2529E63F52004922AC /* Assets.xcassets */,
+				9295CC2A29E63F52004922AC /* Info.plist */,
+			);
+			path = "Modern Stagecoach";
+			sourceTree = "<group>";
+		};
+		9295CC3029E641EF004922AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC4229E64802004922AC /* DestinationModel.swift */,
+				9295CC4429E6482E004922AC /* TravelModel.swift */,
+				9295CC4629E64847004922AC /* UserModel.swift */,
+				9295CC4829E64885004922AC /* OnboardingPageModel.swift */,
+				9295CC4A29E6489F004922AC /* TicketModel.swift */,
+				9295CC4C29E648F9004922AC /* CityModel.swift */,
+				9295CC4E29E64953004922AC /* TravellerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9295CC3229E64220004922AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC3C29E64707004922AC /* Notification+Extension.swift */,
+				9295CC3E29E64726004922AC /* Date+Extension.swift */,
+				9295CC4029E64746004922AC /* UITextField+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9295CC3329E64502004922AC /* ALConfig */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC3429E6452A004922AC /* ALSeatConfig.swift */,
+				9295CC3629E64593004922AC /* ALSeatDataManager.swift */,
+				9295CC3829E645D4004922AC /* ALSeatCreator.swift */,
+			);
+			path = ALConfig;
+			sourceTree = "<group>";
+		};
+		9295CC5229E64ABE004922AC /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC5029E649D0004922AC /* OnboardingCollectionViewCell.swift */,
+				9295CC6729E652A9004922AC /* Ticket.swift */,
+				9295CC6929E652DE004922AC /* User.swift */,
+				9295CC6B29E65312004922AC /* BoughtTicket.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		9295CC5529E64B59004922AC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC7929E65776004922AC /* Main.storyboard */,
+				9295CC2729E63F52004922AC /* LaunchScreen.storyboard */,
+				9295CC5629E64B60004922AC /* View */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9295CC5629E64B60004922AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC5D29E64CE9004922AC /* Ticket.xib */,
+				9295CC5F29E64E02004922AC /* User.xib */,
+				9295CC6129E64E9E004922AC /* BoughtTicket.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9295CC6D29E6533F004922AC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC7029E65366004922AC /* Passenger.swift */,
+				9295CC7229E65378004922AC /* TravelDate.swift */,
+				9295CC7429E65388004922AC /* TravelHour.swift */,
+				9295CC8729E66A44004922AC /* PassengerTicket.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9295CC7629E6554D004922AC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9295CC7B29E66157004922AC /* ViewController.swift */,
+				9295CC7D29E662E2004922AC /* HomeScreenViewController.swift */,
+				9295CC7F29E66448004922AC /* AlertViewController.swift */,
+				9295CC8129E6647C004922AC /* TicketsViewController.swift */,
+				9295CC8329E66510004922AC /* TravelListViewController.swift */,
+				9295CC8529E665AC004922AC /* BusScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E4F39712472C00B13AEA0388 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC78A83A298ABCC99776CFD1 /* Pods-Modern Stagecoach.debug.xcconfig */,
+				2461E901E47D6CCE68EFE6D2 /* Pods-Modern Stagecoach.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9295CC1829E63F51004922AC /* Modern Stagecoach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9295CC2D29E63F52004922AC /* Build configuration list for PBXNativeTarget "Modern Stagecoach" */;
+			buildPhases = (
+				CA7E9E455F9350A0F09E3598 /* [CP] Check Pods Manifest.lock */,
+				9295CC1529E63F51004922AC /* Sources */,
+				9295CC1629E63F51004922AC /* Frameworks */,
+				9295CC1729E63F51004922AC /* Resources */,
+				5C13C20EE4E21C373F4C8D34 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Modern Stagecoach";
+			productName = "Modern Stagecoach";
+			productReference = 9295CC1929E63F51004922AC /* Modern Stagecoach.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9295CC1129E63F51004922AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					9295CC1829E63F51004922AC = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 9295CC1429E63F51004922AC /* Build configuration list for PBXProject "Modern Stagecoach" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9295CC1029E63F51004922AC;
+			productRefGroup = 9295CC1A29E63F51004922AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9295CC1829E63F51004922AC /* Modern Stagecoach */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9295CC1729E63F51004922AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9295CC6229E64E9E004922AC /* BoughtTicket.xib in Resources */,
+				9295CC2929E63F52004922AC /* LaunchScreen.storyboard in Resources */,
+				9295CC6029E64E02004922AC /* User.xib in Resources */,
+				9295CC7A29E65776004922AC /* Main.storyboard in Resources */,
+				9295CC2629E63F52004922AC /* Assets.xcassets in Resources */,
+				9295CC5E29E64CE9004922AC /* Ticket.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C13C20EE4E21C373F4C8D34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Modern Stagecoach/Pods-Modern Stagecoach-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Modern Stagecoach/Pods-Modern Stagecoach-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Modern Stagecoach/Pods-Modern Stagecoach-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA7E9E455F9350A0F09E3598 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Modern Stagecoach-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9295CC1529E63F51004922AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9295CC7C29E66157004922AC /* ViewController.swift in Sources */,
+				9295CC4929E64885004922AC /* OnboardingPageModel.swift in Sources */,
+				9295CC8829E66A44004922AC /* PassengerTicket.swift in Sources */,
+				9295CC4F29E64953004922AC /* TravellerModel.swift in Sources */,
+				9295CC4129E64746004922AC /* UITextField+Extension.swift in Sources */,
+				9295CC5129E649D0004922AC /* OnboardingCollectionViewCell.swift in Sources */,
+				9295CC7129E65366004922AC /* Passenger.swift in Sources */,
+				9295CC3729E64593004922AC /* ALSeatDataManager.swift in Sources */,
+				9295CC3929E645D4004922AC /* ALSeatCreator.swift in Sources */,
+				9295CC4D29E648F9004922AC /* CityModel.swift in Sources */,
+				9295CC4329E64802004922AC /* DestinationModel.swift in Sources */,
+				9295CC8229E6647C004922AC /* TicketsViewController.swift in Sources */,
+				9295CC7329E65378004922AC /* TravelDate.swift in Sources */,
+				9295CC8029E66448004922AC /* AlertViewController.swift in Sources */,
+				9295CC3529E6452A004922AC /* ALSeatConfig.swift in Sources */,
+				9295CC4B29E6489F004922AC /* TicketModel.swift in Sources */,
+				9295CC3D29E64707004922AC /* Notification+Extension.swift in Sources */,
+				9295CC3F29E64726004922AC /* Date+Extension.swift in Sources */,
+				9295CC7529E65388004922AC /* TravelHour.swift in Sources */,
+				9295CC7E29E662E2004922AC /* HomeScreenViewController.swift in Sources */,
+				9295CC1D29E63F51004922AC /* AppDelegate.swift in Sources */,
+				9295CC4529E6482E004922AC /* TravelModel.swift in Sources */,
+				9295CC4729E64847004922AC /* UserModel.swift in Sources */,
+				9295CC6C29E65312004922AC /* BoughtTicket.swift in Sources */,
+				9295CC6829E652A9004922AC /* Ticket.swift in Sources */,
+				9295CC1F29E63F51004922AC /* SceneDelegate.swift in Sources */,
+				9295CC8629E665AC004922AC /* BusScreenViewController.swift in Sources */,
+				9295CC8429E66510004922AC /* TravelListViewController.swift in Sources */,
+				9295CC6A29E652DE004922AC /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9295CC2729E63F52004922AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9295CC2829E63F52004922AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9295CC2B29E63F52004922AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9295CC2C29E63F52004922AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9295CC2E29E63F52004922AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC78A83A298ABCC99776CFD1 /* Pods-Modern Stagecoach.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74SC6H4AQ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Modern Stagecoach/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Modern Stagecoach";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tugcantopaloglu.Modern-Stagecoach";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9295CC2F29E63F52004922AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2461E901E47D6CCE68EFE6D2 /* Pods-Modern Stagecoach.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 74SC6H4AQ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Modern Stagecoach/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Modern Stagecoach";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tugcantopaloglu.Modern-Stagecoach";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9295CC1429E63F51004922AC /* Build configuration list for PBXProject "Modern Stagecoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9295CC2B29E63F52004922AC /* Debug */,
+				9295CC2C29E63F52004922AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9295CC2D29E63F52004922AC /* Build configuration list for PBXNativeTarget "Modern Stagecoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9295CC2E29E63F52004922AC /* Debug */,
+				9295CC2F29E63F52004922AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9295CC1129E63F51004922AC /* Project object */;
+}
