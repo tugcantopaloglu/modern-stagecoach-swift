@@ -1,4 +1,4 @@
-# ModernStagecoach IMPORTANT
+# Modern Stagecoach
  Has some animations bugs lead to app crash but systems work. If I find some time I will fix this animation bug.
 
 Update before lesson animation problem solved. I tried to took travels from an api but api doesn't work. It causes travelList is nil error. Can't update for manual travel list because I don't have time to update it. Other functionalities works fine.
