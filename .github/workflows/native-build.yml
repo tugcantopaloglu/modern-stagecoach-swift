@@ -1,0 +1,56 @@
+name: Native simulator build
+
+on:
+  push:
+    branches: [main, codex/native-build-validation]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: native-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 20
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Record native toolchain and verify locked pods
+        run: |
+          set -euo pipefail
+          xcodebuild -version | tee "$RUNNER_TEMP/toolchain.log"
+          xcodebuild -showsdks | tee -a "$RUNNER_TEMP/toolchain.log"
+          cmp Podfile.lock Pods/Manifest.lock
+          xcodebuild -list -workspace "Modern Stagecoach.xcworkspace"
+      - name: Build existing UIKit workspace
+        run: |
+          set -euo pipefail
+          xcodebuild -workspace "Modern Stagecoach.xcworkspace" \
+            -scheme "Modern Stagecoach" -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/derived-data" \
+            CODE_SIGNING_ALLOWED=NO build | tee "$RUNNER_TEMP/build.log"
+          app="$RUNNER_TEMP/derived-data/Build/Products/Debug-iphonesimulator/Modern Stagecoach.app"
+          test -s "$app/Modern Stagecoach"
+          tar -czf "$RUNNER_TEMP/modern-stagecoach-simulator.tar.gz" \
+            -C "$(dirname "$app")" "$(basename "$app")"
+      - name: Save build evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: modern-stagecoach-simulator-build
+          path: |
+            ${{ runner.temp }}/toolchain.log
+            ${{ runner.temp }}/build.log
+            ${{ runner.temp }}/modern-stagecoach-simulator.tar.gz
+          retention-days: 7
+          if-no-files-found: warn

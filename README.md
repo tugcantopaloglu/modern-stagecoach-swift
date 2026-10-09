@@ -40,6 +40,10 @@ xcodebuild -workspace "Modern Stagecoach.xcworkspace" \
   CODE_SIGNING_ALLOWED=NO build
 ```
 
+## Native build checks
+
+The [native build workflow](.github/workflows/native-build.yml) builds the existing workspace with Xcode 16.4 on macOS 15. It verifies that the checked-in CocoaPods manifest matches the dependency lockfile, uses the app's iOS 16.4 deployment target, and saves an unsigned simulator app archive and build logs for seven days after a successful build. It does not launch the app, make bookings, or call the travel API.
+
 ## Current limitations
 
 - Travel results depend on the JSONBin URL in `TravelListViewController.swift`. The original project notes report that this API stopped working. Failed or invalid responses now leave the list empty, but the app has no local travel dataset or error/retry interface.
