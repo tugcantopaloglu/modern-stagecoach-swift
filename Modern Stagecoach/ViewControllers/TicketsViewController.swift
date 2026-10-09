@@ -32,7 +32,7 @@ class TicketsViewController: UIViewController {
         self.ticketTableView.rowHeight = 223
         print("\(tickets)")
 
-        ticketTableView.register(UINib(nibName: "TicketTableViewCell", bundle: nil), forCellReuseIdentifier: "ticketCell")
+        ticketTableView.register(UINib(nibName: "BoughtTicket", bundle: nil), forCellReuseIdentifier: "ticketCell")
     }
     @IBAction func goBackAction(_ sender: Any) {
        // dismiss(animated: true, completion: nil)

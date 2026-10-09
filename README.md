@@ -1,19 +1,53 @@
-# Modern Stagecoach - Bus Ticket Program
- Has some animations bugs lead to app crash but systems work. If I find some time I will fix this animation bug.
+# Modern Stagecoach
 
-Update before lesson animation problem solved. I tried to took travels from an api but api doesn't work. It causes travelList is nil error. Can't update for manual travel list because I don't have time to update it. Other functionalities works fine.
+A UIKit bus ticket interface exercise written in Swift. It includes city and date selection, an animated onboarding flow, travel results, seat selection, passenger entry, and a ticket summary. Seat reservations and ticket data are kept in memory by the app.
 
--Pods and ALBus library used.
+## Open and build
 
-Known Bugs:
--sometimes onboarding screen doesn't show and after 5 sec app starts automatically.
+Use a Mac with Xcode and an iOS simulator runtime. The app specifies Swift 5 and an iOS 16.4 deployment target.
 
--looking for more
- 
-Sevgili hocam eğer derste olamazsam işten yeni çıktığımdandır hemen gelmeye çalışacağım :). Görüşmek üzere 
+```bash
+git clone https://github.com/tugcantopaloglu/modern-stagecoach-swift.git
+cd modern-stagecoach-swift
+open "Modern Stagecoach.xcworkspace"
+```
 
+Open the workspace because it includes both the app project and `Pods/Pods.xcodeproj`. Select the `Modern Stagecoach` scheme and a compatible simulator. For a physical device, configure your own signing team and bundle identifier.
 
- Screens:
- 
- 
-<img width="832" alt="Screens" src="https://user-images.githubusercontent.com/53763911/231352236-f55dc2a5-187d-4a12-bb86-78cb945bae62.png">
+The repository includes `Pods/`, `Podfile.lock`, and `Pods/Manifest.lock`. To restore the locked CocoaPods integration on macOS, close Xcode and run:
+
+```bash
+pod install --deployment
+open "Modern Stagecoach.xcworkspace"
+```
+
+The lockfile records CocoaPods 1.12.0 and these dependency versions:
+
+| Pod | Locked version | Use |
+| --- | --- | --- |
+| lottie-ios | 4.1.3 | Animated onboarding and seat screen graphics |
+| ALBusSeatView | 0.2.5 | Seat layout and selection |
+| iOSDropDown | 0.4.0 | City selection fields |
+
+Third-party source and attribution are retained under `Pods/`.
+
+A simulator build can be checked on macOS with:
+
+```bash
+xcodebuild -workspace "Modern Stagecoach.xcworkspace" \
+  -scheme "Modern Stagecoach" -configuration Debug \
+  -destination 'generic/platform=iOS Simulator' \
+  CODE_SIGNING_ALLOWED=NO build
+```
+
+## Current limitations
+
+- Travel results depend on the JSONBin URL in `TravelListViewController.swift`. The original project notes report that this API stopped working. Failed or invalid responses now leave the list empty, but the app has no local travel dataset or error/retry interface.
+- The travel request still runs synchronously when the screen loads, so a slow response can block the interface.
+- The original notes report intermittent onboarding presentation problems. The `welcome`, `secure`, and `seats` animation names also have no matching bundled animation assets.
+- The app does not implement a live booking or payment service, and it has no automated app test target.
+- Source and resource checks do not establish simulator or device behavior. Native builds, first-launch onboarding, travel API integration, seat selection, passenger entry, and ticket navigation require acceptance testing on macOS/Xcode.
+
+## Screens
+
+![Application screens](Screens.png)

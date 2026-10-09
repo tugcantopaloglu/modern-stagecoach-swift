@@ -22,16 +22,18 @@ class TravelListViewController: UIViewController {
 
         goBackButton.layer.cornerRadius = 10
         self.travelListTableView.rowHeight = 160
+        travelListTableView.register(UINib(nibName: "Ticket", bundle: nil), forCellReuseIdentifier: "travelCellTest")
         
         let urlStr = "https://api.jsonbin.io/b/620fa8864bf50f4b2d01e7be/1"
         guard let travelURL = URL(string: urlStr) else { return }
         //let data = try? Data(contentsOf: userURL)
-        let travelList = try? JSONDecoder().decode([TravelModel].self, from: Data(contentsOf: travelURL))
-        travels = travelList!
-        for i in 0...travels.count-1{
-            destinations.append(DestinationModel(startDestination: destination1, endDestination: destination2, date: date, travelModel: travels[i]))
+        guard let travelList = try? JSONDecoder().decode([TravelModel].self, from: Data(contentsOf: travelURL)) else {
+            return
         }
-        travelListTableView.register(UINib(nibName: "TravelTableViewCell", bundle: nil), forCellReuseIdentifier: "travelCellTest")
+        travels = travelList
+        for travel in travels {
+            destinations.append(DestinationModel(startDestination: destination1, endDestination: destination2, date: date, travelModel: travel))
+        }
     }
     
     @IBAction func goBackButtonAction(_ sender: Any) {
@@ -39,10 +41,10 @@ class TravelListViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        HomeScreenViewController.newTicket.travelHour.time = destinations[indexPath.row].travelModel?.time! ?? "-"
-        HomeScreenViewController.newTicket.endTime = destinations[indexPath.row].travelModel?.endTime! ?? "-"
-        HomeScreenViewController.newTicket.length = destinations[indexPath.row].travelModel?.travelTime! ?? "-"
-        HomeScreenViewController.newTicket.price = destinations[indexPath.row].travelModel?.price! ?? "-"
+        HomeScreenViewController.newTicket.travelHour.time = destinations[indexPath.row].travelModel?.time ?? "-"
+        HomeScreenViewController.newTicket.endTime = destinations[indexPath.row].travelModel?.endTime ?? "-"
+        HomeScreenViewController.newTicket.length = destinations[indexPath.row].travelModel?.travelTime ?? "-"
+        HomeScreenViewController.newTicket.price = destinations[indexPath.row].travelModel?.price ?? "-"
         
         let busScreenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "busScreenIdentity") as! BusScreenViewController
         busScreenVC.modalPresentationStyle = .fullScreen

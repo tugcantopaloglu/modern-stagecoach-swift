@@ -25,10 +25,14 @@ class Ticket: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     func configure(model: DestinationModel) {
-        self.busImages.image = UIImage(named: model.travelModel!.image!)
-        self.timeLabel.text = model.travelModel!.time!
-        self.priceLabel.text = model.travelModel!.price!
-        self.travelTimeLabel.text = model.travelModel!.travelTime!
+        if let image = model.travelModel?.image {
+            self.busImages.image = UIImage(named: image)
+        } else {
+            self.busImages.image = nil
+        }
+        self.timeLabel.text = model.travelModel?.time
+        self.priceLabel.text = model.travelModel?.price
+        self.travelTimeLabel.text = model.travelModel?.travelTime
         self.destination1Label.text = model.startDestination
         self.destination2Label.text = model.endDestination
         self.dateLabel.text = model.date

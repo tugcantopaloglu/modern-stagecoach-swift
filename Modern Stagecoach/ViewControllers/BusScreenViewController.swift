@@ -46,7 +46,7 @@ class BusScreenViewController: UIViewController {
         dataManager.seatList = [first]
         seatView?.reload()
         
-        usersTableView.register(UINib(nibName: "BusScreenUsersViewCell", bundle: nil), forCellReuseIdentifier: "usersCellIdentifier")
+        usersTableView.register(UINib(nibName: "User", bundle: nil), forCellReuseIdentifier: "usersCellIdentifier")
     }
     
     @objc func changeImage(){

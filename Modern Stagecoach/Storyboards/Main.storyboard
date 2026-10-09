@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="j8p-v0-Pd6">
             <objects>
-                <viewController storyboardIdentifier="onboardingIdentity" id="Gu9-u0-i0k" customClass="ViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onboardingIdentity" id="Gu9-u0-i0k" customClass="ViewController" customModule="Modern_Stagecoach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G6c-8T-pUF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onboardingCellIdentifier" id="BX8-pg-1Tb" customClass="OnboardingCollectionViewCell" customModule="BussTicketApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="onboardingCellIdentifier" id="BX8-pg-1Tb" customClass="OnboardingCollectionViewCell" customModule="Modern_Stagecoach" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-32.5" width="414" height="730"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D1O-bf-tXJ">
@@ -67,7 +67,7 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yz5-S0-p3S" customClass="AnimationView" customModule="Lottie">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yz5-S0-p3S" customClass="LottieAnimationView" customModule="Lottie">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="363"/>
                                                     <color key="backgroundColor" red="0.85882352939999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -170,7 +170,7 @@
         <!--Home Screen View Controller-->
         <scene sceneID="n0o-I2-4Oj">
             <objects>
-                <viewController storyboardIdentifier="homeScreenIdentity" id="9p5-FF-9ml" customClass="HomeScreenViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeScreenIdentity" id="9p5-FF-9ml" customClass="HomeScreenViewController" customModule="Modern_Stagecoach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fDT-3b-AGP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,7 +432,7 @@
         <!--Alert View Controller-->
         <scene sceneID="Hzz-Rb-ScI">
             <objects>
-                <viewController storyboardIdentifier="alertIdentity" id="rft-uL-HUZ" customClass="AlertViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="alertIdentity" id="rft-uL-HUZ" customClass="AlertViewController" customModule="Modern_Stagecoach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pa9-Ld-gnf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -509,7 +509,7 @@
         <!--Travel List View Controller-->
         <scene sceneID="lXq-CG-PBh">
             <objects>
-                <viewController storyboardIdentifier="TravelListIdentity" id="aPD-F0-luR" customClass="TravelListViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TravelListIdentity" id="aPD-F0-luR" customClass="TravelListViewController" customModule="Modern_Stagecoach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2dc-wk-V6p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -576,7 +576,7 @@
         <!--Bus Screen View Controller-->
         <scene sceneID="qxO-Xd-fdI">
             <objects>
-                <viewController storyboardIdentifier="busScreenIdentity" id="EcD-QW-czX" customClass="BusScreenViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="busScreenIdentity" id="EcD-QW-czX" customClass="BusScreenViewController" customModule="Modern_Stagecoach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="adT-lU-Ebw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -722,7 +722,7 @@
                                     <action selector="goBackButtonAction:" destination="EcD-QW-czX" eventType="touchUpInside" id="vmE-3t-fMd"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59L-gO-5R9" customClass="AnimationView" customModule="Lottie">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59L-gO-5R9" customClass="LottieAnimationView" customModule="Lottie">
                                 <rect key="frame" x="349" y="195" width="55" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.97254901959999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -792,7 +792,7 @@
         <!--Tickets View Controller-->
         <scene sceneID="5qB-Cl-WAh">
             <objects>
-                <viewController storyboardIdentifier="ticketVcIdentifier" id="WOK-Kq-ITp" customClass="TicketsViewController" customModule="BussTicketApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ticketVcIdentifier" id="WOK-Kq-ITp" customClass="TicketsViewController" customModule="Modern_Stagecoach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9RJ-Gi-fHK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
