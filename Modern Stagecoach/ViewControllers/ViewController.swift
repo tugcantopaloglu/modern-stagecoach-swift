@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     
     var slides = [OnboardingPageModel]()
+    private var onboardingTimer: Timer?
     
     var currentPage = 0 {
         didSet{
@@ -61,15 +62,30 @@ class ViewController: UIViewController {
         
         nextBtn.layer.cornerRadius = 15
         
-        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { timer in
-            self.currentPage += 1
-            let indexPath = IndexPath(item: self.currentPage, section: 0)
-            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-
-            if self.currentPage == self.slides.count-1 {
+        onboardingTimer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { [weak self] timer in
+            guard let self = self, self.advanceOnboardingPage() else {
                 timer.invalidate()
+                return
             }
         }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        onboardingTimer?.invalidate()
+        onboardingTimer = nil
+    }
+
+    deinit {
+        onboardingTimer?.invalidate()
+    }
+
+    func advanceOnboardingPage() -> Bool {
+        guard currentPage + 1 < slides.count else { return false }
+        currentPage += 1
+        let indexPath = IndexPath(item: currentPage, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        return currentPage + 1 < slides.count
     }
     
     

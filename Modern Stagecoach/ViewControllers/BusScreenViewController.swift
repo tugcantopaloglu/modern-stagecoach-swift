@@ -22,6 +22,8 @@ class BusScreenViewController: UIViewController {
     var travelIndex: Int = 0
     var first = [SeatStub]()
     var selectedSeatCount:Int = 0
+    private var passengerName = ""
+    private var passengerID = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,9 +90,8 @@ class BusScreenViewController: UIViewController {
         }
         
         // Bos kullanici bilgisi
-        let ndx1 = IndexPath(row:(0), section: 0)
-        let cell1 = ticketListCollectionView.cellForRow(at:ndx1) as! User
-        if (cell1.nameSurnameTextField.text!.isEmpty || cell1.idNoTextField.text!.isEmpty){
+        view.endEditing(true)
+        if (passengerName.isEmpty || passengerID.isEmpty){
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let myAlert = storyboard.instantiateViewController(withIdentifier: "alertIdentity") as! AlertViewController
             myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
@@ -104,12 +105,8 @@ class BusScreenViewController: UIViewController {
         var ticketsTemp = [UserModel]()
         for i in 0...dataManager.selectedSeatlist.count-1{
              //print("----->> \(dataManager.selectedSeatlist[i].cellIdentifier)")
-            let ndx = IndexPath(row:(0), section: 0)
-            let cell = ticketListCollectionView.cellForRow(at:ndx) as! User
-            let userName = cell.nameSurnameTextField.text!
-            let userID = cell.idNoTextField.text!
             let userSeatNum = String(dataManager.selectedSeatlist[i].cellIndex)
-            ticketsTemp.append(UserModel(nameSurname: userName, idNumber: userID, seatNumber: userSeatNum))
+            ticketsTemp.append(UserModel(nameSurname: passengerName, idNumber: passengerID, seatNumber: userSeatNum))
             
             // Satilan koltuk icin deger duzenlenmesi
             HomeScreenViewController.reservedSeats[dataManager.selectedSeatlist[i].number-1].sellable = false
@@ -128,6 +125,14 @@ class BusScreenViewController: UIViewController {
     @IBAction func goBackButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+
+    @objc private func passengerNameChanged(_ sender: UITextField) {
+        passengerName = sender.text ?? ""
+    }
+
+    @objc private func passengerIDChanged(_ sender: UITextField) {
+        passengerID = sender.text ?? ""
+    }
 }
 
 extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
@@ -139,6 +144,10 @@ extension BusScreenViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "usersCellIdentifier") as! User
         cell.nameSurnameTextField.underLine()
         cell.idNoTextField.underLine()
+        cell.nameSurnameTextField.text = passengerName
+        cell.idNoTextField.text = passengerID
+        cell.nameSurnameTextField.addTarget(self, action: #selector(passengerNameChanged(_:)), for: .editingChanged)
+        cell.idNoTextField.addTarget(self, action: #selector(passengerIDChanged(_:)), for: .editingChanged)
         cell.seatNumberLabel.text = ""// String(dataManager.selectedSeatlist[indexPath.row].cellIdentifier)
         return cell
     }

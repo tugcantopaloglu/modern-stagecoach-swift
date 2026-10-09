@@ -42,7 +42,9 @@ xcodebuild -workspace "Modern Stagecoach.xcworkspace" \
 
 ## Native build checks
 
-The [native build workflow](.github/workflows/native-build.yml) builds the existing workspace with Xcode 16.4 on macOS 15. It verifies that the checked-in CocoaPods manifest matches the dependency lockfile, uses the app's iOS 16.4 deployment target, and saves an unsigned simulator app archive and build logs for seven days after a successful build. It does not launch the app, make bookings, or call the travel API.
+The [native build workflow](.github/workflows/native-build.yml) builds the existing workspace with Xcode 16.4 on macOS 15. It verifies that the checked-in CocoaPods manifest matches the dependency lockfile, uses the app's iOS 16.4 deployment target, and saves an unsigned simulator app archive and build logs for seven days after a successful build.
+
+Controlled simulator fixtures compile the app's existing source with a separate validation entry point and load its compiled storyboard and nib resources. They check invalid/empty/partial travel data, ticket outlets, passenger values after cell recreation, and onboarding timer bounds and cancellation. They use fabricated fixture values and make no travel API or booking-service calls. The fixtures do not replace manual acceptance of complete user journeys.
 
 ## Current limitations
 

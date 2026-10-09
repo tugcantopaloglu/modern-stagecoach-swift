@@ -27,13 +27,23 @@ class TravelListViewController: UIViewController {
         let urlStr = "https://api.jsonbin.io/b/620fa8864bf50f4b2d01e7be/1"
         guard let travelURL = URL(string: urlStr) else { return }
         //let data = try? Data(contentsOf: userURL)
-        guard let travelList = try? JSONDecoder().decode([TravelModel].self, from: Data(contentsOf: travelURL)) else {
+        guard let data = try? Data(contentsOf: travelURL) else {
             return
         }
+        updateTravels(from: data)
+    }
+
+    @discardableResult
+    func updateTravels(from data: Data) -> Bool {
+        guard let travelList = try? JSONDecoder().decode([TravelModel].self, from: data) else {
+            return false
+        }
         travels = travelList
+        destinations.removeAll()
         for travel in travels {
             destinations.append(DestinationModel(startDestination: destination1, endDestination: destination2, date: date, travelModel: travel))
         }
+        return true
     }
     
     @IBAction func goBackButtonAction(_ sender: Any) {

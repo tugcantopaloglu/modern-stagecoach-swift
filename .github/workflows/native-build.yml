@@ -43,6 +43,10 @@ jobs:
           test -s "$app/Modern Stagecoach"
           tar -czf "$RUNNER_TEMP/modern-stagecoach-simulator.tar.gz" \
             -C "$(dirname "$app")" "$(basename "$app")"
+      - name: Run controlled UIKit regression fixtures
+        run: |
+          set -euo pipefail
+          bash .github/validation/run-native-fixtures.sh | tee "$RUNNER_TEMP/fixtures.log"
       - name: Save build evidence
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
@@ -52,5 +56,7 @@ jobs:
             ${{ runner.temp }}/toolchain.log
             ${{ runner.temp }}/build.log
             ${{ runner.temp }}/modern-stagecoach-simulator.tar.gz
+            ${{ runner.temp }}/fixtures.log
+            ${{ runner.temp }}/fixture-result.json
           retention-days: 7
           if-no-files-found: warn
